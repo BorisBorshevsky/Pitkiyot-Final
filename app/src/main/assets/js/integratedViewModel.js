@@ -84,7 +84,7 @@ var Pitkiyot;
 
     /**
      * Model for List Notes Page
-     * @param MainModel
+     * @param parent
      * @constructor
      */
     var ListNotesModel = function (parent) {
@@ -111,7 +111,7 @@ var Pitkiyot;
 
         };
 
-        self.onTapHold = function (data, e) {
+        self.onTapHold = function () {
             console.log('tapHold', this);
 
             // unfortunate use because of JQM

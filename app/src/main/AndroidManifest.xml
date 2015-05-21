@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pitkiyot.pitkiyot" >
+    package="com.pitkiyot.android" >
 
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
@@ -15,14 +15,14 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.pitkiyot.android.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".NotificationReceiver" />
+        <receiver android:name="com.pitkiyot.android.NotificationReceiver" />
     </application>
 
 </manifest>

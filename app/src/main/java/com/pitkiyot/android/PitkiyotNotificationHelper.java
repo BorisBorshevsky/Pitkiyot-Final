@@ -1,4 +1,4 @@
-package com.pitkiyot.pitkiyot;
+package com.pitkiyot.android;
 
 import android.app.AlarmManager;
 import android.app.Notification;

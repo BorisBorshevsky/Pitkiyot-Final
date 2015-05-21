@@ -18,7 +18,7 @@
         }
     }, EDIT_PAGE_ID);
 
-//
+//tests
 //Android.createNotification("this is title1", "this is desc", 1, 4000);
 //Android.createNotification("this is title2", "this is desc", 2, 4000);
 //Android.createNotification("this is title3", "this is desc", 3, 4000);

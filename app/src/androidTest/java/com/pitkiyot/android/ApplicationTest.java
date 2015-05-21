@@ -1,4 +1,4 @@
-package com.pitkiyot.pitkiyot;
+package com.pitkiyot.android;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
