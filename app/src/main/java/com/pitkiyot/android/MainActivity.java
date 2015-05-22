@@ -26,9 +26,8 @@ public class MainActivity extends Activity {
             webSettings.setAllowUniversalAccessFromFileURLs(true);
         }
 
-        WebView webView = (WebView) findViewById(R.id.webview);
-        webView.addJavascriptInterface(new WebAppInterface(this), "Android");
-        webView.loadUrl("file:///android_asset/index.html");
+        myWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
+        myWebView.loadUrl("file:///android_asset/index.html");
 
     }
 

@@ -5,11 +5,8 @@ import android.content.Context;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
 
-/**
- * Created by user on 5/20/2015.
- */
 public class WebAppInterface {
-    Context mContext;
+    private final Context mContext;
 
     /**
      * Instantiate the interface and set the context

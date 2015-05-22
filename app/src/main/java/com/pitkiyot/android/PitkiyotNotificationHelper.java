@@ -7,9 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.SystemClock;
 
-/**
- * Created by user on 5/20/2015.
- */
 public class PitkiyotNotificationHelper {
 
     /**
