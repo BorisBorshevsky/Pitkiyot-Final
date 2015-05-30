@@ -10,7 +10,7 @@ import android.webkit.WebView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.pitkiyot.android.pref.PitkiyotPreferencesHelper;
-import com.pitkiyot.android.pref.WebInterface.WebAppInterface;
+import com.pitkiyot.android.WebInterface.WebAppInterface;
 
 public class MainActivity extends Activity {
 
