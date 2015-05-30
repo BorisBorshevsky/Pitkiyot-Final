@@ -55,11 +55,6 @@ ko.bindingHandlers.datepicker = {
 
 ko.bindingHandlers.timepicker = {
     init: function (element, valueAccessor, allBindingsAccessor) {
-        debugger;
-        //initialize timepicker with some optional options
-        //var options = allBindingsAccessor().timepickerOptions || {};
-        //var input = $(element).timepicker(options);
-
         //handle the field changing
         ko.utils.registerEventHandler(element, "time-change", function (event, time) {
             var observable = valueAccessor(),

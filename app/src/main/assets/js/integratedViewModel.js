@@ -47,7 +47,7 @@ var Pitkiyot;
             return self.parent().currentTask();
         });
 
-        self.backOnClicked = function (data, e) {
+        self.backOnClicked = function () {
             console.log('back clicked');
 
             module.pageChangeHelper.changeToLastVisited();
@@ -119,7 +119,7 @@ var Pitkiyot;
             self.parent().currentTask(this);
         };
 
-        self.deleteCurrentTask = function (data, e) {
+        self.deleteCurrentTask = function () {
             console.log('delete clicked');
             module.notificationHelper.cancelNotification(self.parent().currentTask());
             self.parent().tasks.remove(function (e) {

@@ -5,6 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
     tools:context=".MainActivity">
 
     <WebView xmlns:android="http://schemas.android.com/apk/res/android"

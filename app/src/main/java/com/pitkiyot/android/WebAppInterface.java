@@ -17,7 +17,7 @@ public class WebAppInterface {
 
     /**
      * Show a toast from the web page
-     * @param toast
+     * @param toast toast content
      */
     @JavascriptInterface
     public void showToast(String toast) {
@@ -26,7 +26,7 @@ public class WebAppInterface {
 
     /**
      * Schedule a notification
-     * @param Title
+     * @param Title task title
      * @param Description
      * @param id
      * @param time delay in ms
