@@ -1,5 +1,3 @@
-
-
 var Pitkiyot;
 (function (module) {
 

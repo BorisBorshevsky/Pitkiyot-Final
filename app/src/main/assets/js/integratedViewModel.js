@@ -111,6 +111,10 @@ var Pitkiyot;
 
         };
 
+        self.openSettings = function(){
+            Pitkiyot.settingsHelper.openPreferencesScreen();
+        }
+
         self.onTapHold = function () {
             console.log('tapHold', this);
 

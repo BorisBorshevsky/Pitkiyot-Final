@@ -1,6 +1,7 @@
 package com.pitkiyot.android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -8,8 +9,13 @@ import android.webkit.WebView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.pitkiyot.android.pref.PitkiyotPreferencesHelper;
+import com.pitkiyot.android.pref.WebInterface.WebAppInterface;
 
 public class MainActivity extends Activity {
+
+    private static final String FILE_ANDROID_ASSET_PREFIX = "file:///android_asset/";
+    private static final String MAIN_HTML_FILE = "index.html";
 
     private WebView webView;
     private AdView adView;
@@ -21,6 +27,7 @@ public class MainActivity extends Activity {
 
         webView = (WebView) findViewById(R.id.webview);
 
+
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
@@ -28,7 +35,7 @@ public class MainActivity extends Activity {
         webSettings.setDatabaseEnabled(true); //enable database storage api
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //disable screen rotation
 
-        if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
             webSettings.setAllowFileAccessFromFileURLs(true);
             webSettings.setAllowUniversalAccessFromFileURLs(true);
         }
@@ -44,13 +51,18 @@ public class MainActivity extends Activity {
         // end ad part
 
         webView.addJavascriptInterface(new WebAppInterface(this), "Android");
-        webView.loadUrl("file:///android_asset/index.html");
+        webView.loadUrl(FILE_ANDROID_ASSET_PREFIX + MAIN_HTML_FILE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        PitkiyotPreferencesHelper.setPreferences(this);
     }
 
 
     @Override
-    protected void onSaveInstanceState(Bundle outState)
-    {
+    protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
         // Save the state of the WebView
@@ -58,13 +70,10 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState)
-    {
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
         // Restore the state of the WebView
         webView.restoreState(savedInstanceState);
     }
-
-
 }

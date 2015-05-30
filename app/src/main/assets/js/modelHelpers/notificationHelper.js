@@ -1,6 +1,3 @@
-/**
- * Created by user on 5/21/2015.
- */
 var Pitkiyot;
 (function (module) {
 

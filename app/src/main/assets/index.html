@@ -25,10 +25,12 @@
     <script type="text/javascript" src="js/viewHelpers/timeWidgetHelper.js"></script>
     <script type="text/javascript" src="js/modelHelpers/storageHelper.js"></script>
     <script type="text/javascript" src="js/modelHelpers/notificationHelper.js"></script>
+    <script type="text/javascript" src="js/modelHelpers/settingsHelper.js"></script>
     <script type="text/javascript" src="js/viewHelpers/pageChangeHelper.js"></script>
     <script type="text/javascript" src="js/integratedViewModel.js"></script>
     <script type="text/javascript" src="js/customBindings.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
 
     <title>Pitkiyot</title>
 
@@ -41,6 +43,7 @@
         <div data-role="header">
             <h1>Pitkiyot</h1>
             <a href="#" data-bind="click: onNewTaskClick" class="ui-btn-right" data-role="button" data-icon="grid">New Note</a>
+            <a href="#" data-bind="click: openSettings" class="ui-btn-left" data-role="button" data-icon="gear">Settings</a>
         </div>
 
 
